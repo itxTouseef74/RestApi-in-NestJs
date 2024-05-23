@@ -28,7 +28,7 @@ export class BookService {
     }
 
     
-    deleteBookService(bookId: string): string {
+    deleteBookService(bookId: number): string {
         const initialLength = this.books.length;
         this.books = this.books.filter(book => book.id !== bookId);
         return this.books.length < initialLength ? "Book deleted successfully" : "Book not found";
